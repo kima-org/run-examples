@@ -34,4 +34,4 @@ jobs:
 
     - name: Run example
       run : |
-        python -c "from kima. examples import $EXAMPLE"
+        python -c "from kima.examples import ${EXAMPLE}"

@@ -1,9 +1,7 @@
 name: run examples
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "5 4 * * 1,3,5"
+  workflow_dispatch
 
 jobs:
   _51Peg:

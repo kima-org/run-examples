@@ -2,12 +2,12 @@ name: run examples
 
 on:
   push
-  # workflow_dispatch
+  # workflow_dispatch:
 
 jobs:
-  uses: kima-org/run-examples/.github/workflows/reusable.yml@main
+  _51Peg:
+    uses: kima-org/run-examples/.github/workflows/reusable.yml@main
 
-  # _51Peg:
   #   runs-on: ubuntu-latest
   #   steps:
       

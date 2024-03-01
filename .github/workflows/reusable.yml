@@ -13,6 +13,12 @@ jobs:
   install-kima:
     runs-on: ubuntu-latest
     steps:
+
+    - id: set-up-env
+      name: Set up environment
+      run: |
+        echo "EXAMPLE=$" >> $GITHUB_ENV
+
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
@@ -28,4 +34,4 @@ jobs:
 
     - name: Run example
       run : |
-        python -c "from kima import examples; examples.$(run=True, load=True, steps=100)"
+        python -c "from kima. examples import $EXAMPLE"

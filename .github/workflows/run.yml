@@ -7,3 +7,11 @@ on:
 jobs:
   install:
     uses: kima-org/run-examples/.github/workflows/reusable.yml@main
+
+  run-example:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - name: run
+        run: |
+          echo Hello

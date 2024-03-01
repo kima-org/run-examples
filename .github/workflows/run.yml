@@ -14,4 +14,4 @@ jobs:
     steps:
       - name: run
         run: |
-          echo Hello
+          python -c "import kima"

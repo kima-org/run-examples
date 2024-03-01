@@ -1,3 +1,4 @@
+name: Reusable kima install
 on:
   workflow_call
 

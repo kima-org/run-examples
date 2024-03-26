@@ -26,6 +26,9 @@ jobs:
         example:
           - _51Peg
           - multi_instruments
+          - BL2009
+          - CoRoT7
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -16,6 +16,7 @@ jobs:
       - run: pip install -r requirements.txt
 
   run-example:
+    needs: install-kima
     runs-on: ubuntu-latest
     steps:
       - name: test

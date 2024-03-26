@@ -19,3 +19,20 @@ jobs:
       - name: test import
         run: |
           python -c "import kima"
+
+
+
+  run-51Peg:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip' # caching pip dependencies
+      - run: pip install -r requirements.txt
+
+      - name: test import
+        run: |
+          python -c "from kima.examples import _51Peg; _51Peg()"

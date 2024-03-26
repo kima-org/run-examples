@@ -5,13 +5,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-example:
+  import:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip' # caching pip dependencies
+      - run: pip install -r requirements.txt
 
-      - uses: kima-org/run-examples/.github/actions/install.yml@main
-
-      - name: test
+      - name: test import
         run: |
           python -c "import kima"
